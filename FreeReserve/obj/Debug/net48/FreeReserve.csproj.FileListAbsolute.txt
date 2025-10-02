@@ -1,0 +1,7 @@
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\output\net48\FreeReserve.dll
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\obj\Debug\net48\FreeReserve.csproj.AssemblyReference.cache
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\obj\Debug\net48\FreeReserve.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\obj\Debug\net48\FreeReserve.AssemblyInfoInputs.cache
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\obj\Debug\net48\FreeReserve.AssemblyInfo.cs
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\obj\Debug\net48\FreeReserve.csproj.CoreCompileInputs.cache
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\FreeReserve\obj\Debug\net48\FreeReserve.dll
