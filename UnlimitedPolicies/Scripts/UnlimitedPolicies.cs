@@ -12,6 +12,7 @@ namespace UnlimitedPoliciesMod
         public override void OnModInitialization(Mod p_mod)
         {
             mod = p_mod;
+
             PatchGame();
         }
 
@@ -34,13 +35,6 @@ namespace UnlimitedPoliciesMod
         [HarmonyPatch(nameof(Player.AddPolicy))]
         static bool Patch_Pre_AddPolicy(Player __instance, Policy p_policy, bool p_sendRPC)
         {
-            if (__instance.HasPolicy(p_policy.Type))
-                return false;
-
-            if (p_policy.HighCommandPointsCost > __instance.HighCommandPoints)
-                return false;
-
-            __instance.HighCommandPoints -= p_policy.HighCommandPointsCost;
 
             __instance.ListActivePolicies.Add(p_policy);
 
@@ -54,9 +48,7 @@ namespace UnlimitedPoliciesMod
             }
 
             if (p_sendRPC)
-            {
                 MultiplayerManager.Instance.RunRPC("RPC_SyncPlayer", "O", new object[1] { __instance });
-            }
 
             return false;
         }
