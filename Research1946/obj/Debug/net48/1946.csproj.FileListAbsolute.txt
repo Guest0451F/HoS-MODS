@@ -1,0 +1,7 @@
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\output\net48\1946.dll
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\obj\Debug\net48\1946.csproj.AssemblyReference.cache
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\obj\Debug\net48\1946.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\obj\Debug\net48\1946.AssemblyInfoInputs.cache
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\obj\Debug\net48\1946.AssemblyInfo.cs
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\obj\Debug\net48\1946.csproj.CoreCompileInputs.cache
+c:\Users\Ivan\Desktop\Prodject\HormoneLib CORE\Sfers\1946\obj\Debug\net48\1946.dll
