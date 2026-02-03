@@ -1,5 +1,7 @@
 ﻿using HarmonyLib;
 using Photon.Pun;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace UnlimitedPoliciesMod
 {
@@ -12,7 +14,6 @@ namespace UnlimitedPoliciesMod
         public override void OnModInitialization(Mod p_mod)
         {
             mod = p_mod;
-
             PatchGame();
         }
 
@@ -35,7 +36,6 @@ namespace UnlimitedPoliciesMod
         [HarmonyPatch(nameof(Player.AddPolicy))]
         static bool Patch_Pre_AddPolicy(Player __instance, Policy p_policy, bool p_sendRPC)
         {
-
             __instance.ListActivePolicies.Add(p_policy);
 
             if (p_policy.Type == Policies.Type.Military_scientists_1)
@@ -51,6 +51,32 @@ namespace UnlimitedPoliciesMod
                 MultiplayerManager.Instance.RunRPC("RPC_SyncPlayer", "O", new object[1] { __instance });
 
             return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(PoliciesGO))]
+    [HarmonyPatch(nameof(PoliciesGO.ClickOnPolicy))]
+    static class Patch_PoliciesGO_ClickOnPolicy
+    {
+        static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
+        {
+            var codes = new List<CodeInstruction>(instructions);
+            
+            for (int i = 0; i < codes.Count; i++)
+            {
+                if (codes[i].opcode == OpCodes.Ldstr)
+                {
+                    string operand = codes[i].operand as string;
+                    
+                    if (operand == "confirmation.pickNewPolicy")
+                    {
+                        codes[i].operand = "confirmation.pickPolicy";
+                        break;
+                    }
+                }
+            }
+            
+            return codes;
         }
     }
 }
