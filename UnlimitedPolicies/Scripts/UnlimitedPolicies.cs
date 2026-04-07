@@ -13,7 +13,7 @@ namespace UnlimitedPoliciesMod
 
         public override void OnModInitialization(Mod p_mod)
         {
-            mod = p_mod;
+            Mod = p_mod;
             PatchGame();
         }
 
@@ -54,9 +54,9 @@ namespace UnlimitedPoliciesMod
         }
     }
 
-    [HarmonyPatch(typeof(PoliciesGO))]
-    [HarmonyPatch(nameof(PoliciesGO.ClickOnPolicy))]
-    static class Patch_PoliciesGO_ClickOnPolicy
+    [HarmonyPatch(typeof(PoliciesMenu))]
+    [HarmonyPatch(nameof(PoliciesMenu.ClickOnPolicy))]
+    static class Patch_PoliciesMenu_ClickOnPolicy
     {
         static IEnumerable<CodeInstruction> Transpiler(IEnumerable<CodeInstruction> instructions)
         {
